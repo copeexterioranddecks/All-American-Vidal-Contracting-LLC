@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All American Vidal Contracting LLC | Landscape Designer & Contracting Services</title>
+  <meta name="description" content="All American Vidal Contracting LLC offers premier hardscaping, custom pavers, pergolas, bath remodels, outdoor kitchens, and concrete services.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Inter Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              navy: '#1b365d',
+              navyDark: '#122543',
+              green: '#2e7d32',
+              greenDark: '#1e5321',
+              amber: '#d97706',
+              amberDark: '#b45309',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sans text-slate-800 bg-slate-50 antialiased flex flex-col min-h-screen">
+
+  <!-- Top Info Bar -->
+  <div class="bg-brand-navy text-white text-xs sm:text-sm py-2.5 px-4 sm:px-8 border-b border-white/10">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <div class="flex items-center gap-2">
+        <span class="text-slate-300 font-medium">Landscape Designer & Hardscape Specialist</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="mailto:vidal@allamericanvidalcontracting.com" class="flex items-center gap-1.5 hover:text-brand-amber transition-colors font-medium">
+          <i class="fa-solid fa-envelope text-brand-amber"></i>
+          vidal@allamericanvidalcontracting.com
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 py-3 flex justify-between items-center">
+      <!-- Brand Logo & Title -->
+      <a href="#" class="flex items-center gap-3 group">
+        <img src="https://lh5.googleusercontent.com/-PEehHhx84iE/AAAAAAAAAAI/AAAAAAAAAAA/UlOeK2l0B2Q/s400-c-k-mo/photo.jpg" 
+             alt="All American Vidal Contracting LLC Logo" 
+             onerror="this.src='https://placehold.co/120x120/1b365d/ffffff?text=AAVC'" 
+             class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover border-2 border-brand-navy shadow-md group-hover:scale-105 transition-transform">
+        <div>
+          <span class="block font-extrabold text-lg sm:text-xl text-brand-navy leading-tight tracking-tight">
+            All American Vidal
+          </span>
+          <span class="block text-xs font-semibold text-brand-green tracking-wide">
+            Contracting LLC
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 font-semibold text-sm text-slate-700">
+        <a href="#about" class="hover:text-brand-green transition-colors">About</a>
+        <a href="#services" class="hover:text-brand-green transition-colors">Services</a>
+        <a href="#blogs" class="hover:text-brand-green transition-colors">Blogs</a>
+        <a href="#contact" class="hover:text-brand-green transition-colors">Contact</a>
+      </nav>
+
+      <!-- Email CTA Button -->
+      <div class="hidden sm:flex items-center">
+        <a href="mailto:vidal@allamericanvidalcontracting.com" class="bg-brand-navy hover:bg-brand-navyDark text-white text-xs sm:text-sm px-4 py-2.5 rounded-lg font-semibold transition-all shadow-md flex items-center gap-2">
+          <i class="fa-solid fa-envelope text-brand-amber"></i>
+          Email Us
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobileMenuBtn" class="md:hidden p-2 text-slate-700 hover:text-brand-navy text-xl" aria-label="Toggle Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileNav" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-4 flex-col gap-4">
+      <a href="#about" onclick="toggleMobileNav()" class="py-2 text-slate-800 font-medium hover:text-brand-green border-b border-slate-100">About Us</a>
+      <a href="#services" onclick="toggleMobileNav()" class="py-2 text-slate-800 font-medium hover:text-brand-green border-b border-slate-100">Our Services</a>
+      <a href="#blogs" onclick="toggleMobileNav()" class="py-2 text-slate-800 font-medium hover:text-brand-green border-b border-slate-100">Blog Articles</a>
+      <a href="#contact" onclick="toggleMobileNav()" class="py-2 text-slate-800 font-medium hover:text-brand-green border-b border-slate-100">Contact Email</a>
+      <div class="pt-2">
+        <a href="mailto:vidal@allamericanvidalcontracting.com" class="w-full text-center bg-brand-navy text-white py-2.5 rounded-lg font-semibold text-sm block">
+          <i class="fa-solid fa-envelope text-brand-amber mr-2"></i>Email Us
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <!-- Hero Section -->
+    <section class="relative bg-brand-navy text-white py-20 lg:py-32 overflow-hidden">
+      <!-- Background Image with Gradient Overlay -->
+      <div class="absolute inset-0 z-0">
+        <img src="https://lh3.googleusercontent.com/xgxv5KBa4GnAZ6bPYd3OcpGwkdI9bXrxm5oX5PBk0AIwY7itvWT5Ee7m3VVTxTxvHDY9pHlqRrzY8anT36bkyzZoiForBOuKUOWbs-p5b-yIUNFcqrxnit4DXEajyinduB_vBC8Y" 
+             alt="Main Landscape & Hardscape Showcase" 
+             class="w-full h-full object-cover object-center opacity-30">
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-navyDark via-brand-navy/90 to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-8">
+        <div class="max-w-2xl">
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-green/20 border border-brand-green/40 text-brand-amber text-xs font-bold uppercase tracking-wider mb-6">
+            <i class="fa-solid fa-star text-xs"></i> Premier Landscape & Hardscape Specialist
+          </span>
+          <h1 class="text-3xl sm:text-5xl font-extrabold leading-tight tracking-tight mb-6">
+            Transforming Outdoor & Indoor Spaces
+          </h1>
+          <p class="text-slate-200 text-base sm:text-lg mb-8 leading-relaxed">
+            Welcome to All American Vidal Contracting LLC. We specialize in custom Unilock, Belgard, and Techno-Black paver installation, retaining walls, pergolas, outdoor kitchens, concrete driveways, patios, and interior bath remodels.
+          </p>
+          
+          <div class="flex flex-wrap items-center gap-4">
+            <a href="mailto:vidal@allamericanvidalcontracting.com" class="bg-brand-amber hover:bg-brand-amberDark text-white px-6 py-3.5 rounded-lg font-bold shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 flex items-center gap-2 text-sm sm:text-base">
+              <i class="fa-solid fa-envelope"></i> Contact Us via Email
+            </a>
+            <a href="#services" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white px-6 py-3.5 rounded-lg font-bold transition-all flex items-center gap-2 text-sm sm:text-base">
+              <i class="fa-solid fa-layer-group text-brand-amber"></i> View Our Services
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Badges Banner -->
+    <section class="bg-white border-b border-slate-200 py-6">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8">
+        <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+          <span class="text-xs font-bold text-slate-400 uppercase tracking-wider mr-2">Specialties:</span>
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 text-brand-navy font-semibold text-xs sm:text-sm border border-slate-200">
+            <i class="fa-solid fa-bath text-brand-green"></i> Bathroom Remodeling Services
+          </span>
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 text-brand-navy font-semibold text-xs sm:text-sm border border-slate-200">
+            <i class="fa-solid fa-trowel-bricks text-brand-green"></i> Concrete Contractor
+          </span>
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 text-brand-navy font-semibold text-xs sm:text-sm border border-slate-200">
+            <i class="fa-solid fa-tree text-brand-green"></i> Landscaping Services
+          </span>
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 text-brand-navy font-semibold text-xs sm:text-sm border border-slate-200">
+            <i class="fa-solid fa-layer-group text-brand-green"></i> Paving Services
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 sm:py-24 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <!-- Image Stack -->
+          <div class="relative">
+            <div class="aspect-4/3 rounded-2xl overflow-hidden shadow-xl border-4 border-white">
+              <img src="https://lh3.googleusercontent.com/xgxv5KBa4GnAZ6bPYd3OcpGwkdI9bXrxm5oX5PBk0AIwY7itvWT5Ee7m3VVTxTxvHDY9pHlqRrzY8anT36bkyzZoiForBOuKUOWbs-p5b-yIUNFcqrxnit4DXEajyinduB_vBC8Y" 
+                   alt="Featured Contracting Project" 
+                   class="w-full h-full object-cover">
+            </div>
+            <div class="absolute top-6 left-6 bg-brand-navy text-white p-4 rounded-xl shadow-lg flex items-center gap-3">
+              <i class="fa-solid fa-award text-3xl text-brand-amber"></i>
+              <div>
+                <p class="font-extrabold text-lg leading-none">Landscape Designer</p>
+                <p class="text-xs text-slate-300 mt-1">Specialized Contracting</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div>
+            <span class="text-brand-green font-bold text-sm tracking-wider uppercase mb-2 block">About Our Business</span>
+            <h2 class="text-2xl sm:text-4xl font-extrabold text-brand-navy mb-6 leading-tight">
+              Dedicated to Professional Landscaping & Quality Workmanship
+            </h2>
+            <p class="text-slate-600 mb-6 leading-relaxed">
+              Welcome to <strong>All American Vidal Contracting LLC</strong>, providing professional landscape designer solutions. We offer hardscape, landscaping, retaining wall installation, pavers, outdoor living spaces, outdoor kitchens, pergolas, interior tile, bath remodels, concrete driveways and patios, plus premium <strong>Unilock, Belgard, and Techno-Black pavers</strong>.
+            </p>
+            <p class="text-slate-600 mb-8 leading-relaxed">
+              Whether you are planning a complete outdoor transformation with custom paver installations or updating your home with bath remodeling and interior tile work, our craftsmanship is built to stand the test of time.
+            </p>
+
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3">
+                <i class="fa-solid fa-compass-drafting text-brand-amber text-xl mt-1"></i>
+                <div>
+                  <h4 class="font-bold text-brand-navy text-sm">Professional Design</h4>
+                  <p class="text-xs text-slate-500 mt-1">Thoughtful layouts designed to maximize your space.</p>
+                </div>
+              </div>
+              <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3">
+                <i class="fa-solid fa-gem text-brand-amber text-xl mt-1"></i>
+                <div>
+                  <h4 class="font-bold text-brand-navy text-sm">Quality Brands</h4>
+                  <p class="text-xs text-slate-500 mt-1">Working with Unilock, Belgard, & Techno-Black pavers.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dedicated Services Section -->
+    <section id="services" class="py-16 sm:py-24 bg-white border-t border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-brand-green font-bold text-sm tracking-wider uppercase block mb-2">Our Business Services</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy">Contracting Services</h2>
+          <p class="text-slate-600 mt-4 text-base">
+            Explore our specialized hardscaping, paving, building, and remodeling services.
+          </p>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Service Card 1 -->
+          <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:shadow-xl transition-all duration-300 flex flex-col">
+            <div class="h-56 overflow-hidden relative">
+              <img src="https://landscapinginboise.com/wp-content/uploads/2025/02/installation-of-concrete-block-retaining-walls-was-performed-by-a-contractor-1024x682.jpg" 
+                   alt="Retaining Wall Installation" 
+                   class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-4 right-4 bg-brand-navy text-white text-xs px-3 py-1 rounded-full font-bold">Hardscape</span>
+            </div>
+            <div class="p-6 flex-grow flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold text-brand-navy mb-2">Retaining Wall Installation</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Structural and aesthetic retaining wall solutions designed for erosion management and terraced landscape beds.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 2 -->
+          <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:shadow-xl transition-all duration-300 flex flex-col">
+            <div class="h-56 overflow-hidden relative">
+              <img src="https://www.southernliving.com/thmb/CT5fsCgV3fJwlhEnCWVlTgEzPts=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/kelly-moore-zinc-dust-2000-fed6c24773b24ef08933dbb93fba20a4.jpg" 
+                   alt="Interior Tile & Bath Remodel" 
+                   class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-4 right-4 bg-brand-amber text-white text-xs px-3 py-1 rounded-full font-bold">Interior</span>
+            </div>
+            <div class="p-6 flex-grow flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold text-brand-navy mb-2">Interior Tile & Bath Remodel</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Complete bathroom remodeling and high-end tile craftsmanship for modern interiors.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 3 -->
+          <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:shadow-xl transition-all duration-300 flex flex-col">
+            <div class="h-56 overflow-hidden relative">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv0FPy_y61_UvJJXP1L_ISxajGj8M6DhPNFDBuoaS6Ij6XRSPZMs3Nr8s&s=10" 
+                   alt="Unilock, Belgard & Techno-Black Pavers" 
+                   class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-4 right-4 bg-brand-navy text-white text-xs px-3 py-1 rounded-full font-bold">Pavers</span>
+            </div>
+            <div class="p-6 flex-grow flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold text-brand-navy mb-2">Unilock, Belgard & Techno-Black Pavers</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Expertly installed brick and stone pavers for elegant outdoor walkways, driveways, and custom patios.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 4 -->
+          <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:shadow-xl transition-all duration-300 flex flex-col">
+            <div class="h-56 overflow-hidden relative">
+              <img src="https://pergoladepot.com/wp-content/uploads/2022/01/Cedar-prepare-Pergola-kit.jpg" 
+                   alt="Pergola Installation" 
+                   class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-4 right-4 bg-brand-green text-white text-xs px-3 py-1 rounded-full font-bold">Structures</span>
+            </div>
+            <div class="p-6 flex-grow flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold text-brand-navy mb-2">Pergola Installation</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Custom wooden pergolas providing shade, structural beauty, and architectural accent to your patio space.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 5 -->
+          <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:shadow-xl transition-all duration-300 flex flex-col">
+            <div class="h-56 overflow-hidden relative">
+              <img src="https://arrowoutdoorliving.com/wp-content/uploads/2026/04/ChatGPT-Image-Apr-16-2026-09_31_40-AM.png" 
+                   alt="Outdoor Kitchens & Living" 
+                   class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-4 right-4 bg-brand-green text-white text-xs px-3 py-1 rounded-full font-bold">Outdoor Living</span>
+            </div>
+            <div class="p-6 flex-grow flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold text-brand-navy mb-2">Outdoor Kitchens & Living</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Custom outdoor cooking environments and functional living areas tailored for entertainment and relaxation.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 6 -->
+          <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:shadow-xl transition-all duration-300 flex flex-col">
+            <div class="h-56 overflow-hidden relative">
+              <img src="https://panoramaconcrete.com.au/wp-content/uploads/CobbledPavingGallery50_srcset-large-1.jpg" 
+                   alt="Concrete Driveways & Patios" 
+                   class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-4 right-4 bg-brand-amber text-white text-xs px-3 py-1 rounded-full font-bold">Concrete</span>
+            </div>
+            <div class="p-6 flex-grow flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold text-brand-navy mb-2">Concrete Driveways & Patios</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Durable concrete pouring and finishing for long-lasting custom driveways, paths, and patio foundations.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Articles / Guest Posts Section -->
+    <section id="blogs" class="py-16 sm:py-24 bg-slate-50 border-t border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="text-brand-green font-bold text-sm tracking-wider uppercase block mb-2">Web 2.0 Articles & Industry Insights</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy">Published Articles & Guides</h2>
+          <p class="text-slate-600 mt-4 text-base">
+            Read our published articles on outdoor living design, paver installation benefits, and hardscaping insights.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Article Card 1 -->
+          <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 text-xs text-slate-400 mb-3">
+                <i class="fa-solid fa-newspaper text-brand-amber"></i> Guest Post • Outdoor Living
+              </div>
+              <h3 class="text-lg font-bold text-brand-navy mb-3 line-clamp-2">
+                How Professional Paver Installation Can Improve Your Outdoor Living Space
+              </h3>
+              <p class="text-slate-600 text-xs sm:text-sm mb-4 leading-relaxed">
+                Discover how expert paver selection and structural installation enhance curb appeal and outdoor usability.
+              </p>
+            </div>
+            <a href="https://aroomittal110033.mn.co/posts/how-professional-paver-installation-can-improve-your-outdoor-living-space" 
+               target="_blank" rel="noopener noreferrer" 
+               class="inline-flex items-center gap-2 text-xs font-bold text-brand-green hover:text-brand-greenDark transition-colors">
+              <span>Read Full Article</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+            </a>
+          </div>
+
+          <!-- Article Card 2 -->
+          <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 text-xs text-slate-400 mb-3">
+                <i class="fa-solid fa-newspaper text-brand-amber"></i> Patreon Post • Design Tips
+              </div>
+              <h3 class="text-lg font-bold text-brand-navy mb-3 line-clamp-2">
+                How to Create a Functional & Comfortable Outdoor Space
+              </h3>
+              <p class="text-slate-600 text-xs sm:text-sm mb-4 leading-relaxed">
+                A guide on combining seating, shade, and hardscape features to create an inviting backyard space.
+              </p>
+            </div>
+            <a href="https://www.patreon.com/aaabbb810/posts/how-to-create-174504986" 
+               target="_blank" rel="noopener noreferrer" 
+               class="inline-flex items-center gap-2 text-xs font-bold text-brand-green hover:text-brand-greenDark transition-colors">
+              <span>Read Full Article</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+            </a>
+          </div>
+
+          <!-- Article Card 3 -->
+          <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 text-xs text-slate-400 mb-3">
+                <i class="fa-solid fa-newspaper text-brand-amber"></i> Payhip Blog • Hardscaping
+              </div>
+              <h3 class="text-lg font-bold text-brand-navy mb-3 line-clamp-2">
+                How Professional Hardscaping Can Improve Your Outdoor Space
+              </h3>
+              <p class="text-slate-600 text-xs sm:text-sm mb-4 leading-relaxed">
+                Learn why engineered retaining walls and quality stone pavers increase property value and drainage performance.
+              </p>
+            </div>
+            <a href="https://payhip.com/aaaabbbb/blog/news/how-professional-hardscaping-can-improve-your-outdoor-space" 
+               target="_blank" rel="noopener noreferrer" 
+               class="inline-flex items-center gap-2 text-xs font-bold text-brand-green hover:text-brand-greenDark transition-colors">
+              <span>Read Full Article</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+            </a>
+          </div>
+
+          <!-- Article Card 4 -->
+          <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 text-xs text-slate-400 mb-3">
+                <i class="fa-solid fa-newspaper text-brand-amber"></i> Community Article • Home Advice
+              </div>
+              <h3 class="text-lg font-bold text-brand-navy mb-3 line-clamp-2">
+                Creating a Functional Outdoor Area for Your Home
+              </h3>
+              <p class="text-slate-600 text-xs sm:text-sm mb-4 leading-relaxed">
+                Practical suggestions for integrating pergolas, lighting, and patio zones into family spaces.
+              </p>
+            </div>
+            <a href="https://puff-the-magic-dragon.mn.co/posts/how-to-create-a-functional-and-comfortable-outdoor-space-for-your-home" 
+               target="_blank" rel="noopener noreferrer" 
+               class="inline-flex items-center gap-2 text-xs font-bold text-brand-green hover:text-brand-greenDark transition-colors">
+              <span>Read Full Article</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+            </a>
+          </div>
+
+          <!-- Article Card 5 -->
+          <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between md:col-span-2 lg:col-span-1">
+            <div>
+              <div class="flex items-center gap-2 text-xs text-slate-400 mb-3">
+                <i class="fa-solid fa-newspaper text-brand-amber"></i> Blogspot Post • Landscaping
+              </div>
+              <h3 class="text-lg font-bold text-brand-navy mb-3 line-clamp-2">
+                How Professional Landscaping Can Transform Your Property
+              </h3>
+              <p class="text-slate-600 text-xs sm:text-sm mb-4 leading-relaxed">
+                Strategic landscaping design principles that boost curb appeal and establish outdoor harmony.
+              </p>
+            </div>
+            <a href="https://aaaabbbbq.blogspot.com/2026/11/how-professional-landscaping-can.html" 
+               target="_blank" rel="noopener noreferrer" 
+               class="inline-flex items-center gap-2 text-xs font-bold text-brand-green hover:text-brand-greenDark transition-colors">
+              <span>Read Full Article</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 sm:py-24 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-8 text-center">
+        <span class="text-brand-green font-bold text-sm tracking-wider uppercase block mb-2">Connect With Us</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy mb-6">Contact Email</h2>
+        <p class="text-slate-600 mb-8 max-w-xl mx-auto text-base">
+          For inquiries, design questions, or service details regarding All American Vidal Contracting LLC, reach out directly to our business email address.
+        </p>
+
+        <div class="inline-flex flex-col sm:flex-row items-center justify-center gap-4 p-6 bg-slate-50 border border-slate-200 rounded-2xl shadow-sm">
+          <div class="w-12 h-12 rounded-full bg-brand-navy/10 text-brand-navy flex items-center justify-center shrink-0 text-xl">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <div class="text-center sm:text-left">
+            <span class="block text-xs font-bold text-slate-400 uppercase">Business Email</span>
+            <a href="mailto:vidal@allamericanvidalcontracting.com" class="text-brand-navy hover:text-brand-green font-extrabold text-lg sm:text-xl transition-colors">
+              vidal@allamericanvidalcontracting.com
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-brand-navyDark text-white pt-12 pb-8 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <!-- Col 1: Brand & Contact Info -->
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <img src="https://lh5.googleusercontent.com/-PEehHhx84iE/AAAAAAAAAAI/AAAAAAAAAAA/UlOeK2l0B2Q/s400-c-k-mo/photo.jpg" 
+                 alt="All American Vidal Contracting Logo" 
+                 onerror="this.src='https://placehold.co/100x100/1b365d/ffffff?text=AAVC'" 
+                 class="w-10 h-10 rounded-full border border-brand-amber object-cover">
+            <span class="font-bold text-base">All American Vidal</span>
+          </div>
+          <p class="text-slate-400 text-xs leading-relaxed mb-4">
+            Licensed Landscape Designer & Hardscape Specialist providing premier exterior and interior contracting services across Madison, Alabama.
+          </p>
+          <div class="space-y-2 text-xs text-slate-300">
+            <p class="flex items-start gap-2">
+              <i class="fa-solid fa-location-dot text-brand-amber mt-0.5 shrink-0"></i>
+              <span>209 Mill Road, Madison, AL 35758</span>
+            </p>
+            <p class="flex items-center gap-2">
+              <i class="fa-solid fa-phone text-brand-amber shrink-0"></i>
+              <a href="tel:9383108083" class="hover:text-brand-amber transition-colors">(938) 310-8083</a>
+            </p>
+            <p class="flex items-center gap-2">
+              <i class="fa-solid fa-envelope text-brand-amber shrink-0"></i>
+              <a href="mailto:vidal@allamericanvidalcontracting.com" class="hover:text-brand-amber transition-colors break-all">vidal@allamericanvidalcontracting.com</a>
+            </p>
+            <p class="flex items-center gap-2 pt-1">
+              <i class="fa-brands fa-google text-brand-amber shrink-0"></i>
+              <a href="https://g.page/r/CXlar2O78CS0EBM/" target="_blank" rel="noopener noreferrer" class="underline hover:text-brand-amber transition-colors">Google Business Listing</a>
+            </p>
+          </div>
+        </div>
+
+        <!-- Col 2: Services Quick Links -->
+        <div>
+          <h4 class="font-bold text-sm text-brand-amber uppercase tracking-wider mb-4">Services</h4>
+          <ul class="space-y-2 text-xs text-slate-300">
+            <li><a href="#services" class="hover:text-white transition-colors">Retaining Wall Installation</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">Unilock & Belgard Pavers</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">Outdoor Kitchens & Pergolas</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">Bath Remodel & Interior Tile</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">Concrete Driveways & Patios</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Categories -->
+        <div>
+          <h4 class="font-bold text-sm text-brand-amber uppercase tracking-wider mb-4">Categories</h4>
+          <ul class="space-y-2 text-xs text-slate-300">
+            <li><a href="#about" class="hover:text-white transition-colors">Bathroom Remodeling Services</a></li>
+            <li><a href="#about" class="hover:text-white transition-colors">Concrete Contractor</a></li>
+            <li><a href="#about" class="hover:text-white transition-colors">Landscaping Services</a></li>
+            <li><a href="#about" class="hover:text-white transition-colors">Paving Services</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Direct Links & Business Profile -->
+        <div>
+          <h4 class="font-bold text-sm text-brand-amber uppercase tracking-wider mb-4">Connect With Us</h4>
+          <ul class="space-y-2 text-xs text-slate-300 mb-4">
+            <li><a href="https://g.page/r/CXlar2O78CS0EBM/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-1.5"><i class="fa-brands fa-google text-xs text-brand-amber"></i> Google Map Profile</a></li>
+            <li><a href="https://aroomittal110033.mn.co/posts/how-professional-paver-installation-can-improve-your-outdoor-living-space" target="_blank" class="hover:text-white transition-colors">Paver Installation Article</a></li>
+            <li><a href="https://payhip.com/aaaabbbb/blog/news/how-professional-hardscaping-can-improve-your-outdoor-space" target="_blank" class="hover:text-white transition-colors">Hardscaping Guide</a></li>
+          </ul>
+          <div class="p-3 bg-slate-900/80 border border-slate-700/80 rounded-lg text-xs">
+            <span class="block font-bold text-white mb-1">Address:</span>
+            <span class="text-slate-400">209 Mill Road<br>Madison, AL 35758</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-slate-800 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+        <p>&copy; All American Vidal Contracting LLC. All Rights Reserved. 209 Mill Road, Madison, AL 35758.</p>
+        <p><a href="mailto:vidal@allamericanvidalcontracting.com" class="hover:text-slate-400">vidal@allamericanvidalcontracting.com</a> | <a href="tel:9383108083" class="hover:text-slate-400">(938) 310-8083</a></p>
+      </div>
+    </div>
+  </footer>
